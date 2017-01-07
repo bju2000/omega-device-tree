@@ -46,15 +46,15 @@ BOARD_MKBOOTIMG_ARGS := \
 	--ramdisk_offset 0x04f88000 \
 	--second_offset 0x00000000 \
 	--tags_offset 0x03f88000 \
-	--board nikel
+	--board omega
 
 # Hack for building without kernel sources
-ifeq ($(TARGET_DEVICE),nikel)
+ifeq ($(TARGET_DEVICE),omega)
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 endif
 
 # Partitions
-BOARD_SYSTEMIMAGE_PARTITION_SIZE:=3221225472
+BOARD_SYSTEMIMAGE_PARTITION_SIZE:=2684354560
 BOARD_CACHEIMAGE_PARTITION_SIZE:=452984832
 BOARD_USERDATAIMAGE_PARTITION_SIZE:=3221225472
 BOARD_RECOVERYIMAGE_PARTITION_SIZE:=16777216
